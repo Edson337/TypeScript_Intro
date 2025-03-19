@@ -10,8 +10,29 @@ function multiply(fistNumber:number, secondNumber?:number, base:number = 2):numb
     return fistNumber * base;
 }
 
-const result:number = addNumbers(1, 2);
-const rest:string = restNumbers(1, 2);
-const multiplyResult:number = multiply(5);
+// const result:number = addNumbers(1, 2);
+// const rest:string = restNumbers(1, 2);
+// const multiplyResult:number = multiply(5);
+// console.log({result, rest, multiplyResult});
 
-console.log({result, rest, multiplyResult});
+interface Character {
+    name:string;
+    hp:number;
+    showHp: () => void;
+}
+
+const healCharacter = (character:Character, amount:number) => {
+    character.hp += amount;
+}
+
+const strider: Character = {
+    name: 'Strider',
+    hp: 50,
+    showHp() {
+        console.log(`HP: ${this.hp}`);
+    }
+}
+
+healCharacter(strider, 20);
+
+strider.showHp();
