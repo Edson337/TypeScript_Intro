@@ -25,7 +25,12 @@ const song = "New song";
 const {song:anotherSong, details} = audioPlayer;
 const {author} = details;
 
-console.log("Cancion: ", song);
-console.log("Cancion: ", anotherSong);
-console.log("Autor: ", audioPlayer.details.author);
-console.log("Autor: ", author);
+// console.log("Cancion: ", song);
+// console.log("Cancion: ", anotherSong);
+// console.log("Autor: ", audioPlayer.details.author);
+// console.log("Autor: ", author);
+
+const dbz:string[] = ["Goku", "Vegeta", "Gohan", "Trunks", "Goten", "Piccolo"];
+const [, , gohan, , , piccolo] = dbz;
+
+console.log("Personajes: ", gohan, piccolo || "No existe");
